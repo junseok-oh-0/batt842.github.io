@@ -7,21 +7,25 @@ layout: page-notitle
 Welcome
 ---
 
-Hi, I'm Junseok Oh, but feel free to call me Jun.
+Hi, my name is Junseok Oh. Feel free to call me Jun.
 
 This is my personal blog where I share thoughts on topics that interest me.
 
-I currently work as a backend software engineer at **[Delivery Hero SE][DHSE]**, based in Berlin, Germany.
+I'm a self-employed software engineer running my own business. My business focuses on mobile applications, plugins, and any small software buildable and maintainable by a solo developer or small team. These products address niche needs that only a small team or individual vendor can handle.
 
-In terms of my career, I'm passionate about **Large-Scale Distributed Systems**, **Microservices Architecture**, and **Indie Game Development**.
+Outside of work, I'm a **drawing enthusiast**, **knowledge lover**, and, of course, **engineer**. One day, I want to create work that reflects my personality, tastes, and thought. For that, I've been thinking about how to integrate art and knowledge into my professional skills.
 
-My current tech stack at work includes **Java**, **Kotlin**, **Spring Boot**, **PostgreSQL**, **Kubernetes**, **Microservices**, **Hexagonal Architecture**, and **AWS**. I specialize in **Fintech**, specifically **Online Payment System**.
+### My Career and Skills in a Nutshell
 
-I also have experience in **Windows Application Programming**, **Hadoop**, **HBase**, **Web Search System**, and other technologies, though they are a bit outdated now.
+Before going independent, I was an employee serving as a software engineer for almost 17 years.
 
-I've been searching for questions about the world and myself because I believe a good question and an innovative answer could lead to a yet unexplored, hopefully better, way.
+I started my career at a mid-sized company located in Seoul, Korea. My first role was as a **Windows Application Developer**, and I later transitioned to a **Spring-based Backend Engineer**. I also worked with **HTML**, **Javascript/JQuery**, and **ASP/JSP**, though these skills are somewhat outdated now.
 
-Outside of work, I'm a **drawing enthusiast**, **knowledge lover**, and, of course, **engineer**. Recently, I'm contemplating how to integrate art and knowledge into my profession.
+When I was living in Jeju Island, Korea, I worked at **[Kakao][KAKAOCORP]**'s Web Search Team, developing a **Web Crawler powered by Hadoop/HBase and Spring, running on hundreds of servers**. This gave me hands-on experience with **Large-Scale Distributed Systems** handling petabyte-scale data.
+
+My next and latest employer was **[Delivery Hero SE][DHSE]** in Berlin, Germany. I worked at the Fintech team as a backend software engineer, developing **PSP Connectors communicating with Payment Providers** (such as Adyen, PayPal, etc) and the **Payment Process Flow**. My team and I adopted **Microservices Architecture** for loose coupling, independent scalability, and fast iteration.
+
+Through my time at Delivery Hero, I've built hands-on experience with **Java**, **Kotlin**, **Spring Boot**, **PostgreSQL**, **Kubernetes**, **Microservices**, and **Hexagonal Architecture**.
 
 ### Contact
 <div class="wrapper">
@@ -29,3 +33,4 @@ Outside of work, I'm a **drawing enthusiast**, **knowledge lover**, and, of cour
 </div>
 
 [DHSE]: https://www.deliveryhero.com
+[KAKAOCORP]: https://www.kakaocorp.com/
