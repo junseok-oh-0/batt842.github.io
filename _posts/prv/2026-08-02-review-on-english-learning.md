@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "영어 공부 회고"
+title: "영어 공부 회고 - Comprehension is King"
 date: 2026-08-02 11:00:00 +0200
 categories: prv
 description: 
