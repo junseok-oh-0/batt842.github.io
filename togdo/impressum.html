@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impressum – Togdo</title>
+<meta name="description" content="Impressum von Togdo gemäß § 5 DDG.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- TODO: 사업자가 실제 정보로 교체 (이름/주소/연락처 등 아래 {{...}} 플레이스홀더 전부) -->
+
+<header class="legal-header">
+  <div class="container">
+    <a class="logo" href="index.html" aria-label="Togdo">
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      Togdo
+    </a>
+  </div>
+</header>
+
+<main class="legal-main">
+  <h1>Impressum</h1>
+
+  <h2>Angaben gemäß § 5 DDG</h2>
+  <p>
+    {{OWNER_NAME}}<br>
+    {{BUSINESS_NAME}} (Einzelunternehmen)<br>
+    {{STREET}}<br>
+    {{ZIP}} {{CITY}}<br>
+    Deutschland
+  </p>
+
+  <h2>Kontakt</h2>
+  <p>
+    E-Mail: <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>
+  </p>
+
+  <h2>Umsatzsteuer</h2>
+  <p>
+    <!-- Kleinunternehmer gemäß § 19 UStG: Es wird keine Umsatzsteuer ausgewiesen. -->
+    {{VAT_NOTE}}
+  </p>
+
+  <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+  <p>
+    {{OWNER_NAME}}<br>
+    {{STREET}}, {{ZIP}} {{CITY}}
+  </p>
+</main>
+</body>
+</html>
