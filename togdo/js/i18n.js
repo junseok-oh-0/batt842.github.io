@@ -25,8 +25,25 @@
       "mock.today": "오늘",
       "mock.task1": "물 2L 마시기",
       "mock.task2": "영어 단어 20개",
-      "mock.task3": "30분 걷기",
-      "mock.reaction": "민지가 👏 응원했어요",
+      "mock.task3": "출근길 절망하지 않기",
+      "mock.progressLabel": "오늘의 루틴",
+      "mock.progressCount": "3개 중 2개 완료",
+      "mock.progressHint": "하나만 더 하면 오늘 끝!",
+      "mock.reactionText": "민지가 응원했어요",
+      "mock.reactionCta": "응원 보내기",
+      "mock.friendsTitle": "친구들의 오늘",
+      "mock.friendsViewAll": "모두 보기",
+      "mock.friendsInvite": "초대",
+      "mock.friend1Label": "민지 80%",
+      "mock.friend2Label": "준호 40%",
+      "mock.friend3Label": "Lena 완료",
+      "mock.navToday": "오늘",
+      "mock.navProjects": "프로젝트",
+      "mock.navFriends": "친구",
+      "mock.navReports": "리포트",
+      "mock.watchProgress": "오늘 2/3",
+      "mock.watchRemaining": "하나 남음",
+      "mock.watchAction": "출근길 절망하지 않기",
       "problem.title": "생산성 앱은 많은데, 왜 늘 흐지부지될까요?",
       "problem.body": "기능이 부족해서가 아니에요. 혼자라서 그래요. 목표를 누군가와 나누면 끝까지 해낼 가능성이 훨씬 높아집니다.",
       "features.title": "끝까지 가게 만드는 기능들",
@@ -86,8 +103,25 @@
       "mock.today": "Today",
       "mock.task1": "Drink 2 L of water",
       "mock.task2": "Learn 20 new words",
-      "mock.task3": "30-minute walk",
-      "mock.reaction": "Mia cheered you on 👏",
+      "mock.task3": "Not to Despair on the Way to Work",
+      "mock.progressLabel": "Today's routines",
+      "mock.progressCount": "2 of 3 done",
+      "mock.progressHint": "One more to finish today!",
+      "mock.reactionText": "Mia cheered you on",
+      "mock.reactionCta": "Send cheer",
+      "mock.friendsTitle": "Friends today",
+      "mock.friendsViewAll": "View all",
+      "mock.friendsInvite": "Invite",
+      "mock.friend1Label": "Mia 80%",
+      "mock.friend2Label": "Alex 40%",
+      "mock.friend3Label": "Lena done",
+      "mock.navToday": "Today",
+      "mock.navProjects": "Projects",
+      "mock.navFriends": "Friends",
+      "mock.navReports": "Reports",
+      "mock.watchProgress": "Today 2/3",
+      "mock.watchRemaining": "One left",
+      "mock.watchAction": "Not to Despair on the Way to Work",
       "problem.title": "So many productivity apps. Why do routines still fizzle out?",
       "problem.body": "It's not a lack of features — it's doing it alone. Share your goals with someone, and you're far more likely to follow through.",
       "features.title": "Built to get you over the finish line",
@@ -147,8 +181,25 @@
       "mock.today": "Heute",
       "mock.task1": "2 L Wasser trinken",
       "mock.task2": "20 Vokabeln lernen",
-      "mock.task3": "30 Minuten spazieren",
-      "mock.reaction": "Mia hat dich angefeuert 👏",
+      "mock.task3": "Nicht verzweifeln auf dem Weg zur Arbeit",
+      "mock.progressLabel": "Deine Routinen heute",
+      "mock.progressCount": "2 von 3 erledigt",
+      "mock.progressHint": "Nur noch eine – dann geschafft!",
+      "mock.reactionText": "Mia hat dich angefeuert",
+      "mock.reactionCta": "Anfeuern senden",
+      "mock.friendsTitle": "Freunde heute",
+      "mock.friendsViewAll": "Alle ansehen",
+      "mock.friendsInvite": "Einladen",
+      "mock.friend1Label": "Mia 80%",
+      "mock.friend2Label": "Alex 40%",
+      "mock.friend3Label": "Lena fertig",
+      "mock.navToday": "Heute",
+      "mock.navProjects": "Projekte",
+      "mock.navFriends": "Freunde",
+      "mock.navReports": "Berichte",
+      "mock.watchProgress": "Heute 2/3",
+      "mock.watchRemaining": "Eine übrig",
+      "mock.watchAction": "Nicht verzweifeln auf dem Weg zur Arbeit",
       "problem.title": "So viele Produktivitäts-Apps. Warum schlafen Routinen trotzdem ein?",
       "problem.body": "Nicht wegen fehlender Funktionen, sondern weil man es allein versucht. Wer seine Ziele mit anderen teilt, zieht sie deutlich eher durch.",
       "features.title": "Gemacht, damit du dranbleibst",
@@ -241,7 +292,7 @@
       }
     }
 
-    return "en";
+    return "ko";
   }
 
   function applyLang(lang) {
@@ -305,6 +356,16 @@
     }
   }
 
+  function updateUrlLang(lang) {
+    try {
+      var url = new URL(window.location.href);
+      url.searchParams.set("lang", lang);
+      window.history.replaceState(window.history.state, "", url);
+    } catch (e) {
+      /* URL API unavailable */
+    }
+  }
+
   function initLangSwitcher() {
     var toggle = document.getElementById("lang-toggle");
     var menu = document.getElementById("lang-menu");
@@ -347,6 +408,7 @@
           /* localStorage unavailable */
         }
         applyLang(lang);
+        updateUrlLang(lang);
         closeMenu(true);
       });
 

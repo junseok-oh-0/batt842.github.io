@@ -72,7 +72,7 @@
         <h1 class="hero-title" data-i18n-html="hero.title">Finish what you start —<br>together.</h1>
         <p class="hero-subtitle" data-i18n="hero.subtitle">Togdo is a social routine app that cares less about doing things perfectly and more about getting them done. See your friends' progress on your lock screen and cheer them on with a single tap.</p>
         <div class="hero-ctas">
-          <a class="btn btn-primary" href="mailto:hello@togdo.app?subject=Togdo%20Waitlist" data-i18n="hero.cta">Get notified at launch</a>
+          <span class="btn btn-disabled" aria-disabled="true" role="button" tabindex="-1" data-i18n="hero.cta">Get notified at launch</span>
         </div>
         <div class="store-buttons">
           <span class="btn btn-store" aria-disabled="true" role="button" tabindex="-1">
@@ -87,33 +87,151 @@
       </div>
 
       <div class="hero-visual">
-        <div class="phone" aria-hidden="true">
-          <div class="phone-screen">
-            <div class="phone-header">
-              <span class="phone-label" data-i18n="mock.today">Today</span>
-            </div>
-            <div class="gauge">
-              <div class="gauge-inner">67%</div>
-            </div>
-            <ul class="task-list">
-              <li class="task-item done">
-                <span class="task-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span data-i18n="mock.task1">Drink 2 L of water</span>
-              </li>
-              <li class="task-item done">
-                <span class="task-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span data-i18n="mock.task2">Learn 20 new words</span>
-              </li>
-              <li class="task-item">
-                <span class="task-check"></span>
-                <span data-i18n="mock.task3">30-minute walk</span>
-              </li>
-            </ul>
-            <div class="reaction-toast">
-              <span class="reaction-avatar"></span>
-              <span data-i18n="mock.reaction">Mia cheered you on 👏</span>
+        <div class="device-stage" aria-hidden="true">
+
+          <div class="device-phone">
+            <div class="device-phone__side device-phone__side--mute"></div>
+            <div class="device-phone__side device-phone__side--vol-up"></div>
+            <div class="device-phone__side device-phone__side--vol-down"></div>
+            <div class="device-phone__side device-phone__side--power"></div>
+            <div class="device-phone__bezel">
+              <div class="device-phone__screen">
+                <div class="device-phone__notch"></div>
+
+                <div class="app">
+                  <div class="app__header">
+                    <div class="app__header-id">
+                      <span class="app__wordmark">Togdo</span>
+                      <span class="app__today" data-i18n="mock.today">Today</span>
+                    </div>
+                    <span class="app__profile">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+                    </span>
+                  </div>
+
+                  <div class="app__progress">
+                    <div class="app-gauge">
+                      <svg class="app-gauge__ring" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="#EDE7DA" stroke-width="14"/>
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="#C8471F" stroke-width="14" stroke-linecap="round" stroke-dasharray="209.4 314.2" transform="rotate(-90 60 60)"/>
+                      </svg>
+                      <span class="app-gauge__value">67%</span>
+                    </div>
+                    <div class="app__progress-text">
+                      <span class="app__progress-label" data-i18n="mock.progressLabel">Today's routines</span>
+                      <span class="app__progress-count" data-i18n="mock.progressCount">2 of 3 done</span>
+                      <span class="app__progress-hint" data-i18n="mock.progressHint">One more to finish today!</span>
+                    </div>
+                  </div>
+
+                  <ul class="app-tasks">
+                    <li class="app-task app-task--done">
+                      <span class="app-task__check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                      <span class="app-task__label" data-i18n="mock.task1">Drink 2 L of water</span>
+                      <span class="app-task__time">08:40</span>
+                    </li>
+                    <li class="app-task app-task--done">
+                      <span class="app-task__check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                      <span class="app-task__label" data-i18n="mock.task2">Learn 20 new words</span>
+                      <span class="app-task__time">08:15</span>
+                    </li>
+                    <li class="app-task">
+                      <span class="app-task__check"></span>
+                      <span class="app-task__label" data-i18n="mock.task3">30-minute walk</span>
+                    </li>
+                  </ul>
+
+                  <div class="app__friends">
+                    <div class="app__friends-header">
+                      <span class="app__friends-title" data-i18n="mock.friendsTitle">Friends today</span>
+                      <span class="app__friends-viewall" data-i18n="mock.friendsViewAll">View all</span>
+                    </div>
+                    <div class="app__friends-grid">
+                      <div class="app__friend">
+                        <div class="app__friend-avatar">
+                          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="#FFFFFF" stroke="#EDE7DA" stroke-width="5"/><circle cx="28" cy="28" r="24" fill="none" stroke="#2F6B4C" stroke-width="5" stroke-linecap="round" stroke-dasharray="120.6 150.8" transform="rotate(-90 28 28)"/></svg>
+                          <span class="app__friend-initial">M</span>
+                        </div>
+                        <span class="app__friend-name" data-i18n="mock.friend1Label">Mia 80%</span>
+                      </div>
+                      <div class="app__friend">
+                        <div class="app__friend-avatar">
+                          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="#FFFFFF" stroke="#EDE7DA" stroke-width="5"/><circle cx="28" cy="28" r="24" fill="none" stroke="#2F6B4C" stroke-width="5" stroke-linecap="round" stroke-dasharray="60.3 150.8" transform="rotate(-90 28 28)"/></svg>
+                          <span class="app__friend-initial">A</span>
+                        </div>
+                        <span class="app__friend-name" data-i18n="mock.friend2Label">Alex 40%</span>
+                      </div>
+                      <div class="app__friend">
+                        <div class="app__friend-avatar">
+                          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="#FFFFFF" stroke="#2F6B4C" stroke-width="5"/></svg>
+                          <span class="app__friend-initial">L</span>
+                        </div>
+                        <span class="app__friend-name" data-i18n="mock.friend3Label">Lena done</span>
+                      </div>
+                      <div class="app__friend">
+                        <div class="app__friend-avatar app__friend-avatar--invite">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#5E5A52" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                        </div>
+                        <span class="app__friend-name" data-i18n="mock.friendsInvite">Invite</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="app__reaction">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.2-9A5.2 5.2 0 0 1 12 6.6 5.2 5.2 0 0 1 21.2 12C19 16.6 12 21 12 21z"/></svg>
+                    <span class="app__reaction-text" data-i18n="mock.reactionText">Mia cheered you on</span>
+                    <span class="app__reaction-cta" data-i18n="mock.reactionCta">Send cheer</span>
+                  </div>
+                </div>
+
+                <nav class="app__nav">
+                  <div class="app__nav-item app__nav-item--active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+                    <span data-i18n="mock.navToday">Today</span>
+                  </div>
+                  <div class="app__nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 15v-3M12 15V9M16 15v-5"/></svg>
+                    <span data-i18n="mock.navProjects">Projects</span>
+                  </div>
+                  <div class="app__nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3.5"/><circle cx="17" cy="10" r="2.5"/><path d="M3 19c0-3 3-5 6-5s6 2 6 5M15 15c3 0 6 1 6 4"/></svg>
+                    <span data-i18n="mock.navFriends">Friends</span>
+                  </div>
+                  <div class="app__nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+                    <span data-i18n="mock.navReports">Reports</span>
+                  </div>
+                </nav>
+              </div>
             </div>
           </div>
+
+          <div class="device-watch">
+            <div class="device-watch__band device-watch__band--top"></div>
+            <div class="device-watch__case">
+              <div class="device-watch__crown"></div>
+              <div class="device-watch__side-btn"></div>
+              <div class="device-watch__screen">
+                <div class="watch">
+                  <div class="watch__header">
+                    <span class="watch__wordmark">Togdo</span>
+                    <span class="watch__progress" data-i18n="mock.watchProgress">Today 2/3</span>
+                  </div>
+                  <div class="watch-gauge">
+                    <svg class="watch-gauge__ring" viewBox="0 0 120 120">
+                      <circle cx="60" cy="60" r="50" fill="none" stroke="#2A2825" stroke-width="13"/>
+                      <circle cx="60" cy="60" r="50" fill="none" stroke="#C8471F" stroke-width="13" stroke-linecap="round" stroke-dasharray="209.4 314.2" transform="rotate(-90 60 60)"/>
+                    </svg>
+                    <span class="watch-gauge__value">67%</span>
+                    <span class="watch-gauge__hint" data-i18n="mock.watchRemaining">One left</span>
+                  </div>
+                  <div class="watch__action" data-i18n="mock.watchAction">Finish 30-min walk</div>
+                </div>
+              </div>
+            </div>
+            <div class="device-watch__band device-watch__band--bottom"></div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -223,7 +341,7 @@
     <div class="container">
       <h2 data-i18n="cta.title">Coming soon.</h2>
       <p data-i18n="cta.body">Togdo is launching on iOS and Android. Be the first to know.</p>
-      <a class="btn btn-primary" href="mailto:hello@togdo.app?subject=Togdo%20Waitlist" data-i18n="cta.button">Get notified at launch</a>
+      <span class="btn btn-disabled" aria-disabled="true" role="button" tabindex="-1" data-i18n="cta.button">Get notified at launch</span>
     </div>
   </section>
 </main>
